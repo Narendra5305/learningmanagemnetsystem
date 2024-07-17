@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* CSS for the main container */
+.main-cont {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling the main heading */
+.main-cont h1 {
+    text-align: center;
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Styling the 'Add Assignments' link */
+.main-cont a {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.main-cont a:hover {
+    background-color: #45a049;
+}
+
+/* Styling each assignment container */
+.cont {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling the assignment headings */
+.cont h1 {
+    font-size: 1.5em;
+    color: #444;
+}
+
+
+/* Additional link inside each assignment container */
+.cont a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #008CBA;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.cont a:hover {
+    background-color: #007bb5;
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="main-cont">
+        
+        
+        <div class="cont">
+            <h1>Batch Name:-{{assignment.title}}</h1>
+            <h1>Detail of batch:-{{assignment.detail}}</h1>
+            <a href="{% url 'solution-create' assignment.pk  %}">Solve it</a>
+            
+        </div>
+        
+    </div>
+</body>
+</html>

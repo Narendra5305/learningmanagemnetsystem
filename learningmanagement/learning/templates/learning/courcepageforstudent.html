@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+                /* Main container styles */
+        .main-cont {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Main heading styles */
+        .main-cont h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+        }
+
+        /* Add Course link styles */
+        .main-cont a {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-bottom: 20px;
+            background-color: #000000;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .main-cont a:hover {
+            background-color: #b30000;
+        }
+
+        /* Course container styles */
+        .cont {
+            padding: 15px;
+            margin-bottom: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .cont h1 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .cont a {
+            display: inline-block;
+            padding: 8px 15px;
+            background-color: #020202;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cont a:hover {
+            background-color: #218838;
+        }
+
+    </style>
+</head>
+
+<body>
+    
+    <div class="main-cont">
+        <h1>Cource Page Of Student</h1>
+        <a href="{% url 'signout_page' %}">Sign Out</a>
+        {% for cource in courses%}
+        <div class="cont">
+            <h1>Batch Name:-{{cource.title}}</h1>
+            <h1>Detail of batch:-{{cource.detail}}</h1>
+            <a href="{% url 'assignmentforstudent' %}">View Assignment</a>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

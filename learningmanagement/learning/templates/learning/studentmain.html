@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+                /* Styling for the main container */
+        .main_cont {
+            text-align: center;
+            padding: 50px;
+            background-color: #f2f2f2; /* Light grey background */
+        }
+
+        /* Styling for the heading */
+        .main_cont h1 {
+            font-size: 2.5em;
+            color: #333; /* Dark grey text */
+            margin-bottom: 20px;
+        }
+
+        /* Styling for the container holding the links */
+        .cont {
+            margin-top: 20px;
+        }
+
+        /* Styling for the links */
+        .cont a {
+            display: inline-block;
+            margin: 0 10px; /* Space between the links */
+            padding: 10px 20px;
+            text-decoration: none;
+            color: white;
+            background-color: #007bff; /* Blue background */
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s ease;
+        }
+
+        /* Hover effect for the links */
+        .cont a:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="main_cont">
+        <h1>Welcome to student page</h1>
+        <div class="cont">
+            <a href="{% url 'UserStudentCreate' %}">Register</a>
+            <a href="{% url 'UserStudentLogin' %}">Sign in</a>
+        
+        </div>
+    </div>
+</body>
+</html>
